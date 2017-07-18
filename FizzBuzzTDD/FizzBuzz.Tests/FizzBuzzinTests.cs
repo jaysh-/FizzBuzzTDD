@@ -39,13 +39,22 @@ namespace FizzBuzz.Tests
 			var expected = "1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz, 16, 17," +
 			               " Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, Fizz Buzz, 31";
 			var actual = "";
-			foreach (int i in Enumerable.Range(1, 30))
+			actual = GetFizzBuzzFromOneToN_Inclusive(to: 31);
+			actual.ShouldBe(expected);
+		}
+
+		private string GetFizzBuzzFromOneToN_Inclusive(int to)
+		{
+			var result = "";
+
+			foreach (int i in Enumerable.Range(1, to - 1))
 			{
-				actual += (GetNthFizzBuzz(i) + ", ");
+				result += (GetNthFizzBuzz(i) + ", ");
 			}
 			//Fence Post
-			actual += GetNthFizzBuzz(31);
-			actual.ShouldBe(expected);
+			result += GetNthFizzBuzz(to);
+
+			return result;
 		}
 	}
 }
