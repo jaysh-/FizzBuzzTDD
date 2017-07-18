@@ -1,4 +1,6 @@
-﻿namespace FizzBuzz
+﻿using System.Linq;
+
+namespace FizzBuzz
 {
 	public class FizzBuzzin
 	{
@@ -20,6 +22,21 @@
 			{
 				return n.ToString();
 			}
+		}
+
+
+		public static string GetFizzBuzzFromOneToN_Inclusive(int to)
+		{
+			var result = "";
+
+			foreach (int i in Enumerable.Range(1, to - 1))
+			{
+				result += (GetNthFizzBuzz(i) + ", ");
+			}
+			//Fence Post due to comma
+			result += GetNthFizzBuzz(to);
+
+			return result;
 		}
 
 		private static bool IsaMultipleOfFive(int n)

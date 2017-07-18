@@ -38,23 +38,9 @@ namespace FizzBuzz.Tests
 		{
 			var expected = "1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz, 16, 17," +
 			               " Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, Fizz Buzz, 31";
-			var actual = "";
-			actual = GetFizzBuzzFromOneToN_Inclusive(to: 31);
+			var actual = GetFizzBuzzFromOneToN_Inclusive(to: 31);
 			actual.ShouldBe(expected);
 		}
 
-		private string GetFizzBuzzFromOneToN_Inclusive(int to)
-		{
-			var result = "";
-
-			foreach (int i in Enumerable.Range(1, to - 1))
-			{
-				result += (GetNthFizzBuzz(i) + ", ");
-			}
-			//Fence Post
-			result += GetNthFizzBuzz(to);
-
-			return result;
-		}
 	}
 }
