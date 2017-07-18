@@ -35,10 +35,9 @@ namespace FizzBuzz.Tests
 		[TestMethod]
 		public void NaturalsFrom1To31Inclusive()
 		{
-			var expected = "1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz, 16, 17," +
-			               " Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, Fizz Buzz, 31";
-			var actual = GetFizzBuzzFromOneToN_Inclusive(to: 31);
-			actual.ShouldBe(expected);
+			const string expected = "1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz, 16, 17," +
+			                        " Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, Fizz Buzz, 31";
+			GetFizzBuzzFromOneToN_Inclusive(to: 31).ShouldBe(expected);
 		}
 
 	}
