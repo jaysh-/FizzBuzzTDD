@@ -4,7 +4,11 @@
 	{
 		public static string GetNthFizzBuzz(int n)
 		{
-			if (IsaMultipleOfThree(n))
+			if (IsaMultipleOfFive(n) && IsaMultipleOfThree(n))
+			{
+				return "Fizz Buzz";
+			}
+			else if (IsaMultipleOfThree(n))
 			{
 				return "Fizz";
 			}

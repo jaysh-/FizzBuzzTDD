@@ -4,6 +4,7 @@ using static FizzBuzz.FizzBuzzin;
 
 namespace FizzBuzz.Tests
 {
+
 	[TestClass]
 	public class FizzBuzzinTests
 	{
@@ -23,6 +24,12 @@ namespace FizzBuzz.Tests
 		public void OneBuzz()
 		{
 			GetNthFizzBuzz(5).ShouldBe("Buzz");
+		}
+
+		[TestMethod]
+		public void OneFizzBuzz()
+		{
+			GetNthFizzBuzz(15).ShouldBe("Fizz Buzz");
 		}
 	}
 }
