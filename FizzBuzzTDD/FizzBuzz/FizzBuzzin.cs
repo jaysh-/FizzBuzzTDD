@@ -16,7 +16,10 @@
 			{
 				return "Buzz";
 			}
-			return n.ToString();
+			else
+			{
+				return n.ToString();
+			}
 		}
 
 		private static bool IsaMultipleOfFive(int n)
