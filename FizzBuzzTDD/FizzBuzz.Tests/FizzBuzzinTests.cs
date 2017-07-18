@@ -18,5 +18,11 @@ namespace FizzBuzz.Tests
 		{
 			GetNthFizzBuzz(3).ShouldBe("Fizz");
 		}
+
+		[TestMethod]
+		public void OneBuzz()
+		{
+			GetNthFizzBuzz(5).ShouldBe("Buzz");
+		}
 	}
 }
