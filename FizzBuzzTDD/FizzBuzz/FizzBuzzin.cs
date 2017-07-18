@@ -28,8 +28,8 @@ namespace FizzBuzz
 		public static string GetFizzBuzzFromOneToN_Inclusive(int to)
 		{
 			var result = "";
-
-			foreach (int i in Enumerable.Range(1, to - 1))
+			
+			foreach (var i in Enumerable.Range(1, to - 1))
 			{
 				result += (GetNthFizzBuzz(i) + ", ");
 			}
